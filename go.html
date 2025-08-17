@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>กำลังเปลี่ยนเส้นทาง...</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding-top: 60px;
+      font-family: sans-serif;
+    }
+  </style>
+  <script>
+    // URL จริงที่เข้ารหัสหลายชั้น
+    const part1 = "aHR0cHM6Ly93d3cucHJvZml0YWJsZXJhdGVjcG0uY29tLw==";
+    const part2 = "eHliZ3N1Zms2";
+    const part3 = "P2tleT1kMDY2ZDRjNjU4NDBmZTk4NzU0N2RjZWQwNmE3ZGQ5OQ==";
+    const encodedUrl = part1 + part2 + part3;
+
+    // ตรวจบอทจาก user-agent
+    const ua = navigator.userAgent.toLowerCase();
+    const isBot = /bot|crawl|spider|slurp|mediapartners|google|facebookexternalhit|fetch|monitoring/i.test(ua);
+
+    // ตรวจ referrer (ต้องมาจากโดเมนของคุณ)
+    const expectedReferrer = "freehub99.github.io";
+    const actualRef = document.referrer.toLowerCase();
+
+    function shouldRedirect() {
+      if (isBot) return false;
+      if (!actualRef.includes(expectedReferrer)) return false;
+      return true;
+    }
+
+    // เริ่มการเปลี่ยนเส้นทาง
+    function go() {
+      if (shouldRedirect()) {
+        const finalUrl = atob(encodedUrl);
+        window.location.href = finalUrl; // ไม่มีหน่วงเวลา
+      } else {
+        document.body.innerHTML = "<h1>ไม่สามารถเปลี่ยนเส้นทางได้</h1><p>คุณอาจเข้าผิดลิงก์ หรือระบบป้องกันบล็อกไว้</p>";
+      }
+    }
+
+    window.onload = go;
+  </script>
+</head>
+<body>
+  <h1>กำลังเปลี่ยนเส้นทาง กรุณารอสักครู่...</h1>
+</body>
+</html>
