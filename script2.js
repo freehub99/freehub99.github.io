@@ -19,7 +19,7 @@ const itemsPerPage = 20;
 let currentPage = 1;
 
   let filteredList = animeList.filter(anime =>
-  anime.type.includes("..")
+  anime.type.includes("jav")
 );
 function renderPage(page) {
   animeGrid.innerHTML = '';
