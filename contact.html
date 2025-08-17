@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ติดต่อแจ้งปัญหา - FreeHub99</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="https://img5.pic.in.th/file/secure-sv1/file_000000006cec61f5bd863d1befbf3733.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" />
+  <link href="https://freehub99.github.io/contact" rel="canonical"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Kanit', sans-serif;
+      background: #0d0d0d;
+      color: #e0f2f1;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    header {
+      background-color: #00796b;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      position: relative;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+    }
+    nav {
+      display: flex;
+      gap: 10px;
+    }
+    nav a {
+      padding: 6px 12px;
+      font-weight: bold;
+      color: white;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+    @media(max-width: 600px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        background-color: #00796b;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 10;
+      }
+      nav.active {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+    }
+    main {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 0 15px;
+      text-align: center;
+    }
+    h1 {
+      color: #80cbc4;
+      margin-bottom: 20px;
+    }
+    .contact-box {
+      background: #1b1b1b;
+      border-radius: 10px;
+      padding: 30px 20px;
+      display: inline-block;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    .contact-box p {
+      margin: 15px 0;
+      font-size: 1.1rem;
+    }
+    .contact-btn {
+      display: inline-block;
+      background-color: #00b900;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    .contact-btn:hover {
+      background-color: #009900;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #1b1b1b;
+      color: #b2dfdb;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <a class="logo" href="/">FreeHub99</a>
+  <div class="menu-toggle" id="menuToggle" role="button" tabindex="0" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+  <nav id="navMenu" role="navigation">
+    <a href="หีอมชมพูเนียนฟิต">หีอมชมพูเนียนฟิต</a>
+    <a href="jav">JAV</a>
+    <a href="คลิปหลุด">คลิปหลุด</a>
+    <a href="แตกใน">แตกใน</a>
+    <a href="หนังโป๊ไทยล่าสุด">หนังโป๊ไทยล่าสุด</a>
+    <a href="ลักหลับ">ลักหลับ</a>
+    <a href="contact">ติดต่อแจ้งปัญหา</a>
+  </nav>
+</header>
+
+<main>
+  <h1>ติดต่อแจ้งปัญหา</h1>
+  <div class="contact-box">
+    <p>หากพบปัญหาในการใช้งาน หรือต้องการติดต่อผู้ดูแล</p>
+    <p>สามารถติดต่อได้ทาง LINE</p>
+    <a href="https://line.me/ti/p/HhFTcqaFqG" target="_blank" rel="noopener noreferrer" class="contact-btn">
+      ติดต่อผ่าน LINE
+    </a>
+  </div>
+</main>
+
+<footer>
+  © 2025 FreeHub99 - ติดต่อแจ้งปัญหา
+</footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navMenu = document.getElementById('navMenu');
+  menuToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
+  menuToggle.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      navMenu.classList.toggle('active');
+    }
+  });
+</script>
+</body>
+</html>
