@@ -17,7 +17,7 @@ const pageNumbers = document.getElementById('pageNumbers');
 
 const itemsPerPage = 20;
 let currentPage = 1;
-    let currentPage = 1;
+
   let filteredList = animeList.filter(anime =>
   anime.type.includes("jav")
 );
