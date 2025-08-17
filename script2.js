@@ -17,9 +17,10 @@ const pageNumbers = document.getElementById('pageNumbers');
 
 const itemsPerPage = 20;
 let currentPage = 1;
-    anime.type.includes("jav")
+    let currentPage = 1;
+  let filteredList = animeList.filter(anime =>
+  anime.type.includes("jav")
 );
-
 function renderPage(page) {
   animeGrid.innerHTML = '';
   const start = (page - 1) * itemsPerPage;
