@@ -13,7 +13,7 @@ const animeList = [
   },
 {
     title: "คลิปหลุดด่วน หีสวยไร้ขนอมชมพูรัดควยโคตรแน่น xxx เงี่ยนจัดหีฟิตไม่ไหวน้ำแตกโคตรไว",
-    img: "https://img2.pic.in.th/pic/kmc_20250818_161249.png",
+    img: "https://img5.pic.in.th/file/secure-sv1/20250818_165539.jpg",
     type: "คลิปหลุด แตกใน หนังโป๊ไทย.",
     link: "new-updated-aa1.html"
   },
