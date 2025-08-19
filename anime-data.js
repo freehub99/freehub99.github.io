@@ -23,7 +23,7 @@ const animeList = [
     img: "https://img2.pic.in.th/pic/1701a9613f83e12cf9.gif",
     type: "คลิปหลุด แตกใน หนังโป๊ไทย.",
     link: "new-updated-aa2.html"
-  }
+  },
     {
     title: "คลิปหลุดมาใหม่ ttok7799 หนังโป๊ขาวจั๊วหีอมชมพูหีพี่จีนนี้ดีจริงๆ",
     img: "https://img2.pic.in.th/pic/1638a212f95291deb9.jpg",
